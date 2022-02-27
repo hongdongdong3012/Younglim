@@ -29,7 +29,7 @@ main .main-banner .txt-box p { margin-top: 7px;  display: inline-block; width: 3
 main .main-banner .txt-box a { display: inline-block; margin-top: 32px; padding: 0 35px; border: 1px solid hsla(0,0%,100%,.5); height: 36px; line-height: 2.57; font-size: 14px; color: #fff;  letter-spacing: -.1px; }
 
 
-main .sec01 { margin-top: 70px; }
+main .sec01 { margin-top: 70px;  }
 main .sec01 .txt-box { color: #333; font-weight: 300; line-height: 1.41; letter-spacing: -1px; padding: 0 76.225px; }
 main .sec01 .txt-box .tit { margin-top: 4px; font-weight: 500;  font-size: 20px; }
 main .sec01 .txt-box p { font-size: 24px;}
