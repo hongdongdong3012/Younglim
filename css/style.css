@@ -1,22 +1,11 @@
 /*===========================================================================
-    헤더
-============================================================================*/
-header .top-wrap { width: 1240px; position: fixed; z-index: 1000; display: flex; justify-content: space-between; }
-header .logo-group { display: flex; align-items: center;}
-header .logo-group .logo { width: 142px; }
-header .logo-group .gnb-group { display: flex;  margin-left: 19px; }
-header .logo-group .gnb-group li a { color: #fff;  padding: 20px 15px; }
-header nav { display: flex; justify-content: left; align-items: center; }
-header nav button { display: block; border: 0; width: 30px; height: 30px; }
-header nav .menu-btn { margin-left: 9px; }
-
-/*===========================================================================
     메인페이지
 ============================================================================*/
 main .main-banner { height: 100vh; }
 /* 화면채우기 */
 /* 배너들어간 이미지 사이즈랑 위치가 이상한거 같아요ㅠ */
 main .main-banner .swiper-slide { position: relative; }
+main .main-banner .swiper-slide img { height: 100%; }
 main .main-banner .scroll-box { position: absolute; width: 60px; left: 50%; bottom: 37px; margin-left: -30px; z-index: 2; text-align: center;}
 main .main-banner .scroll-box .bar { margin: 0 auto; width: 1px; height: 13px; background-color: #fff; z-index: 1000; }
 main .main-banner .scroll-box p { margin-top: 9px; font-size: 11px; line-height: 14px; letter-spacing: .11px; color: #fff; } 
@@ -33,6 +22,7 @@ main .sec01 { margin-top: 70px;  }
 main .sec01 .txt-box { color: #333; font-weight: 300; line-height: 1.41; letter-spacing: -1px; padding: 0 76.225px; }
 main .sec01 .txt-box .tit { margin-top: 4px; font-weight: 500;  font-size: 20px; }
 main .sec01 .txt-box p { font-size: 24px;}
+main .sec01 .txt-box p .mobile {display: none;}
 main .sec01 .img-group { margin-top: 60px; display: flex;  justify-content: flex-end; }
 main .sec01 .contents .swiper-wrapper { padding-left: 180px; position: relative; margin-top: 60px; }
 main .sec01 .contents .swiper-slide { position: relative; }
@@ -49,16 +39,17 @@ main .sec02 .container { position: relative; display: flex; }
 main .sec02 .style-group { display: flex; justify-content: flex-end; }
 main .sec02 .style-group li { margin-left: 15px; }
 /* 마진값 오른쪽 값을 못찾겠어요 ㅠ */
-main .sec02 .style-group li button { color: #333; background: inherit; border: 0; font-size: 16px; font-weight: 300 ;line-height: 1.5; }
+main .sec02 .style-group li button { color: #333; background: inherit; border: 0; font-size: 18px; font-weight: 300 ;line-height: 1.5; }
 main .sec02 .style-group li button:hover { font-weight: 400; border-bottom: 0; }
 /* 마우스오버 시 밑줄들어가는 효과? */
 main .sec02 .style-cont-wrap { background-color: #ecebe7; padding-top: 50px; }
+main .sec02 .style-cont-wrap .txt-box {font-size: 16px; }
 /* margin-left값이 -100px로 되어있는데 어떤 기준으로 된건지 모르겠어요ㅠ */
 main .sec02 .style-cont-wrap .style-box01 { width: 50%; display: flex; align-items: center; position: relative;}
 main .sec02 .style-cont-wrap .style-box01 .txt-box { position: absolute; top: 0; right: -28px; transform-origin: 100% 100%; transform: rotate(-90deg);}
 /* transform-origin right및 bottom기준으로 변경됨*/
 main .sec02 .style-cont-wrap .style-box01 .txt-box span { font-weight: 500; padding-right: 10px; color: #707070; letter-spacing: -.1px;  }
-main .sec02 .style-cont-wrap .style-box01 .txt-box .place { font-weight: 300; font-size: 13px; }
+main .sec02 .style-cont-wrap .style-box01 .txt-box .place { font-weight: 300; }
 main .sec02 .style-cont-wrap .style-box02 { margin-top: 10.5%; margin-left: 11.31%; width: 29.16%; }
 main .sec02 .style-cont-wrap .style-box02 .box-wrap { position: relative; }
 main .sec02 .style-cont-wrap .style-box02 .txt-box { position: absolute; bottom: 240px; right: -28px; transform-origin: 100% 100%; transform: rotate(-90deg);} 
@@ -71,7 +62,7 @@ main .sec03 .txt-box .more { position: relative; display: flex; justify-content:
 main .sec03 .txt-box .more::after { content: ''; position: absolute; left: 50%; transform: translateX(-50%); bottom: 0; width: 80px; height: 1px; background: #999; }
 main .sec03 .txt-box .botton-line { margin: 0 auto; width: 75px; height: 1px; background: #8d8d8d; }
 main .sec03 .txt-box .more img { margin-left: 2px; width: 10px; height: 10px; }
-main .sec03 .img-box { position: relative; padding-top: 56%; width: 100%; height: 0; margin-top: 48px; padding: 0 40px; }
+main .sec03 .img-box { position: relative; width: 100%; height: 0; margin-top: 48px; padding: 56% 40px 0; }
 main .sec03 .img-box iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
 main .sec03 .img-box .play-btn { border: 0; background: inherit; width: 60px; height: 60px; position: absolute; top: 50%; left: 50%; z-index: 1000; }
 
@@ -93,6 +84,7 @@ main .sec05 .txt-box .menu-group button:last-child { padding-right: 0; }
 main .sec05 .txt-box .menu-group button:hover { color: #333; }
 main .sec05 .txt-box .menu-group button::after { content: ''; position: absolute; top: 50%; left: 0; transform: translateY(-50%); width: 1px; height: 11px; background-color: #e7e7e7; }
 /* width auto를 빼면 글자가 수직으로 되는데 왜그런가요? 가상클래스의 부모는 어떻게 파악하나요? */
+main .sec05 .txt-box .menu-group button:first-child:after { display: none; }
 main .sec05 .txt-box .menu button:last-child { padding-right: 0; }
 main .sec05 .img-wrap { margin-top: 30px; display:flex; justify-content: space-between;}
 main .sec05 .img-group01 { width: 57.74%; display:flex; flex-wrap: wrap; justify-content: flex-end; }
@@ -154,6 +146,32 @@ main .sec08 .container .con-group li .txt-box .btn { display: inline-block;  mar
 main .sec08 .container .con-group li .txt-box.brand { color: #fff; }
 
 
+
+
 /*===========================================================================
-    푸터
+    반응형
 ============================================================================*/
+@media(max-width: 1240px) {
+    main .main-banner .txt-box .tit { font-size: 34px; line-height: 34px; letter-spacing: -.1px; font-weight: 400;  }
+    main .sec01 .txt-box p .mobile {display: block;}
+
+}
+
+@media(max-width: 768px) {
+    main .main-banner .txt-box p { padding: 6px 20px 0; font-size: 14px; line-height: 22px; }
+    main .main-banner .more-btn-wrap { padding: 0 28px; height: 31px; line-height: 31px; font-size: 12px; } 
+
+    main .sec01 .txt-box { padding-left: 0;}
+    main .sec01 .txt-box p { font-size: 18px; }
+    main .sec01 .txt-box .tit { font-size: 14px; }
+    main .sec01 .cursor { display: none; }
+    main .sec01 .contents .swiper-wrapper { padding-left: 12px; }
+
+    main .sec02 .style-group li button { font-size: 14px; }
+    main .sec02 .style-cont-wrap { margin-top: 60px; }
+    main .sec02 .style-cont-wrap .container { display: flex; flex-wrap: wrap; }
+    main .sec02 .style-cont-wrap .style-box01  { width: 87%; }
+    main .sec02 .style-cont-wrap .txt-box  { font-size: 9px;  }
+    main .sec02 .style-cont-wrap .style-box01 .img-box { margin-top: -100px; }
+    main .sec02 .style-cont-wrap .style-box01 .txt-box { margin-top: -50px; }
+}
