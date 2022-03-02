@@ -6,7 +6,7 @@
     CSS 초기화
 ============================================================================*/
 * { font-family:'Nunito','Noto Sans KR', sans-serif; box-sizing: border-box; margin: 0; padding: 0; } 
-html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, em, img, strong, b, i, dl, dt, dd, ol, ul, li, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, footer, header, menu, nav, section, video, a { border: 0; outline: 0; color: #191919; line-height: 1.5; scroll-behavior: smooth; letter-spacing: -0.6px; } 
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, em, img, strong, b, i, dl, dt, dd, ol, ul, li, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, footer, header, menu, nav, section, video, a { border: 0; outline: 0; line-height: 1.5; scroll-behavior: smooth; letter-spacing: -0.6px; } 
 body { line-height: 1; } 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; } 
 ul, ol, li { list-style: none; } 
@@ -44,23 +44,49 @@ pre { display: inline-block; white-space: pre-wrap; }
     헤더
 ============================================================================*/
 header {z-index: 1000; position: fixed; top:0; left: 0; width: 100%; padding: 20px 0;}
-header .top-wrap { width: 100%; display: flex; justify-content: space-between; }
+header .top-wrap { display: flex; justify-content: space-between; }
 header .logo-group { display: flex; align-items: center;}
-header .logo-group .logo { width: 142px; }
+header .logo-group .logo a { width: 142px; }
 header .logo-group .gnb-group { display: flex;  margin-left: 19px; }
+header .logo-group .gnb-group li { font-size: 16px; }
 header .logo-group .gnb-group li a { color: #fff;  padding: 0 15px; }
 header nav { display: flex; justify-content: left; align-items: center; }
-header nav button { display: block; border: 0; width: 30px; height: 30px; }
+header nav button { margin-left: 20px; border: 0; width: 30px; height: 30px; }
 header nav .menu-btn { margin-left: 9px; }
 
 /*===========================================================================
     푸터
 ============================================================================*/
+footer { padding-top: 180px; }
+footer .top-area .container { display: flex; justify-content: space-between; }
+footer .top-area .tit { font-size: 24px; font-weight: 500; letter-spacing: -.92px; color: #707070; }
+footer .top-area { background-color: #f6f5f3; padding: 42px 0 50px; }
+footer .top-area .menu-group { display: flex; justify-conㅈtent: left; }
+footer .top-area .menu-group .menu02, .menu03 { margin-left: 106px; }
+footer .top-area .menu-group a { padding: 8px 0; font-size: 16px; letter-spacing: -.23px; color: #707070; }
+footer .top-area .menu-group .menu03 { width: 100px; }
+footer .top-area .menu-group .menu03 a { position: relative; }
+footer .top-area .menu-group .menu03 a::after { content: ''; background: url(../images/icon-footer-link.png) no-repeat; transform: translateY(-50%); background-size: 100% auto; width: 16px; height: 16px; position: absolute; top: 50%; right: 0; }
+/* transform: translateY(-50%); background-size: 100% auto; 이부분이 뭘 의미하는지 모르겠어요ㅠ */
+footer .mid-area .container { border-top: 1px solid #ddd; margin-top: 60px; padding-top: 25px; display: flex; justify-content: space-between; }
+footer .mid-area .txt-wrap .brand { font-size: 16px; letter-spacing: -.3px; line-height: 1.37; color: #707070; }
+footer .mid-area .txt-wrap .address { margin-top: 10px; }
+footer .mid-area .txt-wrap .address, .txt-box { font-size: 14px; font-weight: 300; letter-spacing: -.2px; line-height: 1.42; color: #707070; }
+footer .mid-area .txt-wrap .txt-box { margin-top: 4px; display: flex; }
+footer .mid-area .txt-wrap .txt-box .ceo { position: relative; margin-right: 6px; padding-right: 6px; }
+footer .mid-area .txt-wrap .txt-box .ceo::after { content: '';  width: 1px; height: 10px; background-color: #ddd; position: absolute; right: 0; transform: translateY(50%);  }
+footer .mid-area .txt-wrap .txt-box .tel { position: relative; margin-right: 6px; padding-right: 6px; }
+footer .mid-area .txt-wrap .txt-box .tel::after { content: '';  width: 1px; height: 10px; background-color: #ddd; position: absolute; right: 0; transform: translateY(50%);  }
+footer .bottom-area { padding: 16px 0; background-color: #ecebe7; }
+footer .bottom-area .container { display: flex; justify-content: space-between; align-items: center; }
+footer .bottom-area .copy { display: flex; justify-content: space-between; font-size: 14px; color: rgba(51,51,51,.7); line-height: 1.28; font-weight: 500; }
+footer .bottom-area .copy img { margin-right: 2px; width: 16px; }
+footer .bottom-area .tel { font-size: 14px; font-weight: 500; letter-spacing: -.2px; color: #707070; line-height: 1.5; }
 
 /*===========================================================================
     반응형
 ============================================================================*/
 @media(max-width:1240px) {
-    .container {padding: 0 20px;}
+    .container { padding: 0 20px; }
     header .logo-group .gnb-group { display: none; }
 }
