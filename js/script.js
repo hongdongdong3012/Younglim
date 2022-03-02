@@ -12,7 +12,7 @@ var swiper = new Swiper(".main-banner", {
 //sec01 슬라이드
 var swiper = new Swiper(".contents", {
     slidesPerView: 3,
-    spaceBetween: 30,
+    spaceBetween: 32,
     // 이미지 사이 간격 조절
     pagination: {
         el: ".swiper-pagination",
