@@ -5,15 +5,14 @@ main .main-banner { position: relative; height: 100vh; }
 main .main-banner .swiper-slide { position: relative; }
 main .main-banner .swiper-slide img { height: 100%; }
 main .main-banner .txt-box { width: 370px; position: absolute; width: 100%;  bottom: 199px; z-index: 1000; text-align: center;  }
-main .main-banner .txt-box .tit { font-size: 66px; letter-spacing: -.89px;  line-height: 1.12; color: #fff; text-shadow: 0 2px 20px rgb(0 0 0 / 40%);}
-main .main-banner .txt-box p { margin-top: 7px;  display: inline-block; font-size: 16px; color: #fff; line-height: 1.62; letter-spacing: -.7px; }
+main .main-banner .txt-box .tit { font-size: 66px; font-weight: 400; letter-spacing: -.89px;  line-height: 1.12; color: #fff; text-shadow: 0 2px 20px rgb(0 0 0 / 40%);}
+main .main-banner .txt-box p { margin-top: 7px; display: inline-block; font-size: 16px; color: #fff; line-height: 1.62; letter-spacing: -.7px; }
 main .main-banner .txt-box a { display: inline-block; margin-top: 32px; padding: 0 35px; border: 1px solid hsla(0,0%,100%,.5); height: 36px; line-height: 2.57; font-size: 14px; color: #fff;  letter-spacing: -.1px; }
 main .main-banner .scroll-box { position: absolute; width: 60px; left: 50%; bottom: 37px; margin-left: -30px; z-index: 2; text-align: center;}
 main .main-banner .scroll-box .bar { margin: 0 auto; width: 1px; height: 13px; background-color: #fff; z-index: 1000; }
 main .main-banner .scroll-box p { margin-top: 9px; font-size: 11px; line-height: 14px; letter-spacing: .11px; color: #fff; } 
 
-
-main .sec01 { margin-top: 70px;  }
+main .sec01 { padding-top: 100px; }
 main .sec01 .txt-box { color: #333; font-weight: 300; line-height: 1.41; letter-spacing: -1px; }
 main .sec01 .txt-box .tit { margin-top: 4px; font-size: 20px; font-weight: 500;  }
 main .sec01 .txt-box .cont { font-size: 24px; }
@@ -21,39 +20,38 @@ main .sec01 .txt-box p .mobile { display: none; }
 main .sec01 .img-group { margin-top: 60px; display: flex; }
 main .sec01 .contents .swiper-wrapper { padding-left: 180px; position: relative; margin-top: 60px; }
 main .sec01 .contents .swiper-slide { position: relative; }
-main .sec01 .contents .swiper-slide a:hover { background-color: rgba(0,0,0,.1);  transition: opacity .2s ease-in-out 0s; }
+main .sec01 .contents .swiper-slide a:hover::before{ content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,.1); transition: opacity .2s ease-in-out 0s; }
 /* hover값 적용이 안됨 */
 main .sec01 .contents .swiper-slide .part { position: absolute; left: 26px; bottom: 26px; font-size: 26px; color: #fff; line-height: 34px; letter-spacing: -.7px;}
 main .sec01 .contents .cursor { z-index: 10; position: absolute; left: 96px; top: 50%; transform: translateY(-50%); width: 150px; height: 150px; }
 
-main .sec02 { margin-top: 240px; }
+main .sec02 { margin-top: 140px;  }
 main .sec02 .container { position: relative; display: flex; justify-content: flex-end; }
 main .sec02 .style-group { display: flex; }
 main .sec02 .style-group li { margin-left: 15px; }
 main .sec02 .style-group li button { color: #333; background: inherit; border: 0; font-size: 18px; font-weight: 300 ;line-height: 1.5; }
 main .sec02 .style-group li button:hover { font-weight: 400; border-bottom: 1px solid #000; }
-main .sec02 .style-cont-wrap { background-color: #ecebe7; margin-top: 40px; padding-top: 50px; padding-bottom: 135px; }
+main .sec02 .style-cont-wrap { background-color: #ecebe7; margin-top: 40px;  padding-bottom: 94px;  }
 main .sec02 .style-cont-wrap .container { display: flex; flex-wrap: wrap; position: relative; }
 main .sec02 .style-cont-wrap .tit { position: absolute; top: 50%; font-size: 8.333vw; text-align: center;  letter-spacing: 5.903vw; color: #333; font-weight: 300; line-height: 120px; z-index: 10;}
-main .sec02 .style-cont-wrap .txt-box { font-size: 13px; }
-main .sec02 .style-cont-wrap .txt-box .place { font-weight: 300; }
+main .sec02 .style-cont-wrap .txt-box { font-size: 13px; font-weight: 700; color: #707070; letter-spacing: -.1px; }
+main .sec02 .style-cont-wrap .txt-box .place { margin-left: 10px; font-weight: 300; }
 main .sec02 .style-cont-wrap .style-box01 { width: 50%; position: relative; display: flex; align-items: center; }
 main .sec02 .style-cont-wrap .style-box01 .txt-box { position: absolute; top: 0; right: -28px; transform-origin: 100% 100%; transform: rotate(-90deg);}
-main .sec02 .style-cont-wrap .style-box01 .txt-box span { padding-right: 10px; font-weight: 500; color: #707070; letter-spacing: -.1px;  }
-main .sec02 .style-cont-wrap .style-box02 { margin-top: 10.5%; margin-left: 11.31%; width: 29.16%; }
-main .sec02 .style-cont-wrap .style-box02 .box-wrap { position: relative; }
-main .sec02 .style-cont-wrap .style-box02 .txt-box { position: absolute; bottom: 240px; right: -28px; transform-origin: 100% 100%; transform: rotate(-90deg);} 
+main .sec02 .style-cont-wrap .style-box02 { width: 29.16%; position: relative; margin-top: 10.5%; margin-left: 11.31%;}
+main .sec02 .style-cont-wrap .style-box02 .txt-box { position: absolute; top: 0; right: -28px; transform-origin: 100% 100%; transform: rotate(-90deg);} 
 main .sec02 .style-cont-wrap .style-box03 { margin-top: 193px; position: relative; margin-right: 14.23%; width: 56.94%; }
 main .sec02 .style-cont-wrap .style-box03 .txt-box { position: absolute; top: 0; right: -28px; transform-origin: 100% 100%; transform: rotate(-90deg); }
 main .sec02 .style-cont-wrap .style-box03 .cont-txt-box p { padding: 34px 30px 0 0; font-size: 21px; color: #333; font-weight: 300; line-height: 32px; letter-spacing: -.7px; word-break: keep-all; }
-main .sec02 .style-cont-wrap .style-box03 .cont-txt-box .tit { margin-top: 14px; font-size: 20px; color: #333; line-height: 1.7; letter-spacing: -.1px; }
-main .sec02 .style-cont-wrap .style-box03 .suggest-btn { margin-top: 77px; padding: 6px 0 6px 6px; display: flex; justify-content: space-between; width: 230px; border-top: 1px solid #8d8d8d; border-bottom: 1px solid #8d8d8d; font-size: 16px; color: #333; font-weight: 400; line-height:2.12; letter-spacing: -.1px; }
+main .sec02 .style-cont-wrap .style-box03 .cont-txt-box div { margin-top: 14px; font-size: 20px; color: #333; line-height: 1.7; letter-spacing: -.1px;}
+main .sec02 .style-cont-wrap .style-box03 .suggest-btn { margin-top: 42px; padding: 6px 0 6px 6px; display: flex; justify-content: space-between; width: 230px; border-top: 1px solid #8d8d8d; border-bottom: 1px solid #8d8d8d; font-size: 16px; color: #333; font-weight: 400; line-height:2.12; letter-spacing: -.1px; }
 main .sec02 .style-cont-wrap .style-box03 .suggest-btn img { width: 30px; }
 
 main .sec03 { padding-top: 80px; padding-bottom: 90px; background-color: #f6f5f3;  }
 main .sec03 .txt-box { text-align: center; color: #333; }
+main .sec03 .txt-box .mobile { display: none; }
 main .sec03 .txt-box .tit { font-size: 32px; line-height: 1.06; letter-spacing: -.1px; }
-main .sec03 .txt-box p { margin-top: 16px; width: 100%; font-size: 16px; font-weight: 300; line-height: 1.75; letter-spacing: -.7px;}
+main .sec03 .txt-box p { padding-top: 16px; width: 100%; font-size: 16px; font-weight: 300; line-height: 1.75; letter-spacing: -.7px;}
 main .sec03 .txt-box .more { position: relative; display: flex; justify-content: center; align-items: center; padding-top: 12px; padding-bottom: 1px; font-size: 14px; line-height: 1.28; letter-spacing: -.7px; }
 main .sec03 .txt-box .more::after { content: ''; position: absolute; left: 50%; transform: translateX(-50%); bottom: 0; width: 80px; height: 1px; background: #999; }
 main .sec03 .txt-box .botton-line { margin: 0 auto; width: 75px; height: 1px; background: #8d8d8d; }
@@ -84,8 +82,10 @@ main .sec05 .img-group01 .Edge45 { margin-top: 1.55%; width: 42.03%; }
 main .sec05 .img-group02 { width: 41.45%; }
 main .sec05 .img-wrap a { position: relative; }
 main .sec05 .img-wrap p { position: absolute; bottom: 16px; left: 20px; font-size: 16px; color: #fff;  letter-spacing: -.1px; }
+main .sec05 .img-wrap .mo-main-banner { display: none; }
 
 main .mid-banner  { position: relative; padding-top: 120px;}
+main .mid-banner .mo-img-box { display: none; }
 main .mid-banner .txt-box { width: 100%;  position: absolute; top: 50%; z-index: 1000; text-align: center; }
 main .mid-banner .txt-box .tit { font-size: 34px; color: #fff; line-height: 1; letter-spacing: -.1px; }
 main .mid-banner .txt-box p { padding-top: 13px; font-size: 14px; color: #fff;}
@@ -107,18 +107,21 @@ main .sec07 .txt-box p { font-size: 24px; font-weight: 300; line-height: 1.41; l
 main .sec07 .txt-box h2 { margin-top: 5px; font-size: 20px; font-weight: 400; line-height: 1.7; letter-spacing: -.1px; }
 main .sec07 .cont-group { margin-top: 32px; display: flex; justify-content: space-between; }
 main .sec07 .cont-group a { width: 30.9%; padding: 0 4% 4%; box-shadow: 0 2px 10px 0 rgb(0 0 0 / 10%);  }
-main .sec07 .cont-group .txt-box  { position: relative; padding-top: 20px; text-align: center; }
-main .sec07 .cont-group .txt-box .tit { font-size: 26px; color: #333; line-height: 1.31; letter-spacing: -0.81px; }
-main .sec07 .cont-group .txt-box .btn-wrap { position: relative; display: flex; justify-content: space-between; align-items: center; display: inline; display: flex; justify-content: center; align-items: center; }
-main .sec07 .cont-group .txt-box .btn-wrap::after { content: ''; position: absolute; left: 50%; transform: translateX(-50%); bottom: 4px; width: 130px; border-bottom: 1px solid #8d8d8d; }
-main .sec07 .cont-group .txt-box .btn-wrap span { font-size: 16px; color: #333; font-weight: 300; line-height: 2; }  
-main .sec07 .cont-group .txt-box img { width: 13px; height: 18px; }
+main .sec07 .cont-group a .mobile { display: none; }
+main .sec07 .cont-group a .txt-box  { position: relative; padding-top: 20px; text-align: center; }
+main .sec07 .cont-group a .txt-box .tit { font-size: 26px; color: #333; line-height: 1.31; letter-spacing: -0.81px; }
+main .sec07 .cont-group a .txt-box .btn-wrap { display: flex; justify-content: space-between; align-items: center; display: inline; display: flex; justify-content: center; align-items: center; }
+main .sec07 .cont-group a .txt-box .btn-wrap span { position: relative; font-size: 16px; color: #333; font-weight: 300; line-height: 2; }  
+main .sec07 .cont-group a .txt-box .btn-wrap span::after { content: ''; position: absolute; left: 50%; transform: translateX(-50%); bottom: 4px; width: 130px; margin-left: 5px; border-bottom: 1px solid #8d8d8d; }
+main .sec07 .cont-group a .txt-box img { width: 13px; height: 18px; }
 
 main .sec08 { padding-top: 89px; }
 main .sec08 .container { padding-top: 11px; }
 main .sec08 .container .con-group { display: flex; justify-content: space-between; }
 main .sec08 .container .con-group li { position: relative; width: 48.875%; }
+main .sec08 .container .con-group li .mobile { display: none; }
 main .sec08 .container .con-group li .img-box { overflow: hidden; }
+main .sec08 .container .con-group li .img-box .mobile { display: none; }
 main .sec08 .container .con-group li .txt-box { position: absolute; bottom: 11.29%; width: 100%; text-align: center; }
 /* 원본사이트에 top: auto;값을 주던데 따로 이유가 있나요? */
 main .sec08 .container .con-group li .txt-box .tit { font-size: 32px; line-height: 1.06; letter-spacing: -.08px; }
@@ -139,20 +142,96 @@ main .sec08 .container .con-group .brand .btn.brand { border: 1px solid rgba(255
 }
 
 @media(max-width: 768px) {
+    .container { padding: 0 12px; }
     main .main-banner .txt-box p { padding: 6px 20px 0; font-size: 14px; line-height: 22px; }
     main .main-banner .more-btn-wrap { padding: 0 28px; height: 31px; line-height: 31px; font-size: 12px; } 
 
-    main .sec01 .txt-box { padding-left: 0;}
-    main .sec01 .txt-box p { font-size: 18px; }
+    main .sec01  { padding-top: 70px; }
+    main .sec01 .txt-box { margin-top: -20px; }
+    main .sec01 .txt-box .cont { font-size: 18px; }
     main .sec01 .txt-box .tit { font-size: 14px; }
     main .sec01 .cursor { display: none; }
-    main .sec01 .contents .swiper-wrapper { padding-left: 12px; }
-
+    main .sec01 .contents .swiper-wrapper { padding-left: 12px; margin-top: 30px; }
+    main .sec01 .contents .swiper-wrapper .swiper-slide { width: 39% }
+    main .sec01 .contents .swiper-slide .part { left: 12px; bottom: 15px; font-size: 16px; line-height: 14px; letter-spacing: -.11px; }
+        /* 슬라이드 padding값과 width값, 글자값이 안먹어요 ㅠ */
+    
+    main .sec02 { margin-top: 0;}
+    main .sec02 .container { display: flex; justify-content: left; padding-left: 0; }
     main .sec02 .style-group li button { font-size: 14px; }
-    main .sec02 .style-cont-wrap { margin-top: 60px; }
+    main .sec02 .style-cont-wrap { margin-top: 60px; border: 1px solid #000; padding-top: 182px; }
     main .sec02 .style-cont-wrap .container { display: flex; flex-wrap: wrap; }
     main .sec02 .style-cont-wrap .style-box01  { width: 87%; }
-    main .sec02 .style-cont-wrap .txt-box  { font-size: 9px;  }
-    main .sec02 .style-cont-wrap .style-box01 .img-box { margin-top: -100px; }
+    main .sec02 .style-cont-wrap .txt-box  { font-size: 9px; }
+    main .sec02 .style-cont-wrap .txt-box .place { margin-left: 2px; }
+    main .sec02 .style-cont-wrap .tit { width: 100%; margin-top: -370px; }
+    main .sec02 .style-cont-wrap .style-box01 .img-box { margin-top: -200px; }
     main .sec02 .style-cont-wrap .style-box01 .txt-box { margin-top: -50px; }
+    main .sec02 .style-cont-wrap .style-box02 { position: relative; border: 1px solid #000; width: 57%; margin: 0 auto; padding-top: 84px; }
+    main .sec02 .style-cont-wrap .style-box02 .txt-box { position: absolute;  left: -32px;   -webkit-transform-origin: bottom left; border: 1px solid #000;}
+    main .sec02 .style-cont-wrap .style-box03 { padding-left: 12px;  margin-top: 60px; margin-right: 0; width: 100%; }
+    main .sec02 .style-cont-wrap .style-box03 .cont-txt-box p { padding-top: 52px; width: 87.5%; font-size: 16px; color: #333; line-height: 26px; letter-spacing: -.7px;} 
+    main .sec02 .style-cont-wrap .style-box03 .cont-txt-box div { padding-top: 14px; font-size: 16px; color: #333; line-height: 20px; letter-spacing: -.13px; }
+    main .sec02 .style-cont-wrap .style-box03 .cont-txt-box .suggest-btn { padding: 10px 30px 10px 6px; font-weight: 400; letter-spacing: -.1px; font-size: 15px; line-height: 1.33; }
+
+    main .sec03 { padding-top: 60px; padding-bottom: 50px; }
+    main .sec03 .txt-box .tit { font-size: 24px; line-height: 1.25; letter-spacing: -.08px; }
+    main .sec03 .txt-box p { padding: 11px 18px 0; font-size: 14px; line-height: 1.71;  }
+    main .sec03 .txt-box .mobile { display: block; }
+    main .sec03 .txt-box .pc { display: none; }
+    main .sec03 .txt-box .more { font-size: 12px; font-weight: 500; line-height: 1.5; letter-spacing: -.7px;}
+    main .sec03 .img-box { margin-top: 0; }
+    main .sec03 iframe { padding-top: 48px; }
+
+    main .sec04 { padding-top: 23px; }
+    main .sec04 .container { margin: 0 -12px; padding: 37px 0 57px; }
+    main .sec04 .container .tit { font-size: 22px; color: #333; line-height: 1.54; letter-spacing: -.1px; }  
+    main .sec04 .container .icon-group { padding-top: 15px;  margin: -10px 0 0; }
+    main .sec04 .container .icon-group .icon-li { width: 90px; margin: 15px 0 0; }
+    main .sec04 .container .icon-group .icon-li .img-box { padding: 0 19px; width: auto; }
+    main .sec04 .container .icon-group .icon-li h3 { padding-top: 3px; font-size: 14px; line-height: 1.42; letter-spacing: -.7px; color: #333; font-weight: 300; } 
+
+    main .sec05 { margin: 0 12px; padding-top: 23px; }
+    main .sec05 .txt-box .tit { font-size: 22px; color: #333; line-height: 1.36; letter-spacing: -.07px; }
+    main .sec05 .mo-main-banner { display: block; }
+    main .sec05 .img-wrap { display: none; }
+    main .sec05 .mo-img-group .swiper-slide { width: 310px; margin-right: 10px; }
+
+    main .mid-banner { padding-top: 70px; }
+    main .mid-banner .img-box { display: none; }
+    main .mid-banner .mo-img-box { display: block; }
+
+    main .sec06 { padding: 30px 0 70px; }
+    main .sec06 .txt-box .container { padding-top: 20px; }
+    main .sec06 .txt-box .tit { margin-top: 8px; font-size: 22px; line-height: 30px; letter-spacing: -.7px; }
+    main .sec06 .txt-box .more-btn { margin-top: 20px; font-size: 12px; font-weight: 400; line-height: 1.25; }
+    main .sec06 .con-group { margin-top: 14px; }
+    main .sec06 .con-group .txt-box { overflow: hidden;}
+
+    main .sec07 { padding-top: 48px;}
+    main .sec07 .txt-box p { width: 84%; font-size: 18px; line-height: 1.44; letter-spacing: -.74px; word-break: keep-all; }
+    main .sec07 .txt-box h2 { font-size: 14px;  line-height: 20px;  letter-spacing: -.12px; }
+    main .sec07 .cont-group { display: flex; flex-wrap: wrap; }
+    main .sec07 .cont-group a { position: relative; margin-top: 32px; width: 100%; }
+    main .sec07 .cont-group a .mobile { display: block; }
+    main .sec07 .cont-group a .pc {display: none;}
+    main .sec07 .cont-group a .txt-box { position: absolute; top: 0; left: 0; padding-top: 25px; padding-left: 25px;  }
+    main .sec07 .cont-group a .txt-box .tit { text-align: left;  padding-top: 0; font-size: 22px;  line-height: 1.23; letter-spacing: -0.7px; }
+    main .sec07 .cont-group a .txt-box .btn-wrap { display: flex; justify-content: flex-start; }
+
+    main .sec08 .container .con-group { display: flex; flex-wrap: wrap; }
+    main .sec08 .container .con-group li { width: 100%; }
+    main .sec08 .container .con-group li .mobile { display: block; }
+    main .sec08 .container .con-group li .pc { display: none; }
+    main .sec08 .container .con-group li .img-box .mobile { display: block; }
+    main .sec08 .container .con-group li .img-box .pc { display: none; } 
+    main .sec08 .container .con-group li .txt-box { position: absolute; top: auto; bottom: 40px; }
+    main .sec08 .container .con-group li .txt-box .tit { font-size: 24px; line-height: 1.41; letter-spacing: -.08px; }
+    main .sec08 .container .con-group li .txt-box .txt-wrap { padding: 1px 0 0; font-size: 14px; line-height: 24px;} 
+    main .sec08 .container .con-group .brand { margin-top: 12px; }
+
+
+
 }
+
+

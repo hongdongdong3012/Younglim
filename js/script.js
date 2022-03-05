@@ -60,3 +60,4 @@ document
             '<div class="swiper-slide">Slide ' + ++appendNumber + "</div>",
         ]);
     });
+
