@@ -6,7 +6,6 @@ var swiper = new Swiper(".main-banner", {
         delay: 2500,
         disableOnInteraction: false,
     },
-
 });
 
 //sec01 슬라이드
@@ -17,7 +16,6 @@ var swiper = new Swiper(".contents", {
     pagination: {
         el: ".swiper-pagination",
         type: "progressbar",
-
     },
     navigation: {
         nextEl: ".swiper-button-next",
@@ -29,8 +27,6 @@ var swiper = new Swiper(".contents", {
             spaceBetween: 32,
         },
     },
-
-
 });
 
 
@@ -50,8 +46,8 @@ var swiper = new Swiper(".sec05 .swiper", {
 
 //sec06 슬라이드
 var swiper = new Swiper(".sec06 .swiper", {
-    slidesPerView: 3.5,
-    spaceBetween: 32,
+    slidesPerView: 2.8,
+    spaceBetween: 10,
     breakpoints: {
         768: {
             slidesPerView: 3,  //브라우저가 768보다 클 때

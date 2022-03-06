@@ -69,14 +69,14 @@ main .sec04 .icon-group .icon-li .img-box { width: 80px; }
 main .sec04 .icon-group .icon-li h3 { text-align: center; font-size: 16px; color: #333; font-weight: 300; line-height: 1; letter-spacing: -.67px; }
 
 main .sec05 { padding-top: 100px; }
-main .sec05 .container { display: flex; justify-content: space-between; align-items: center }
+main .sec05  .container { display: flex; justify-content: space-between; align-items: center; border: 1px solid #000; }
 main .sec05 .txt-box .tit { font-size: 32px; color: #333; line-height: 1.06; letter-spacing: -.1px; }
 main .sec05 .txt-box .menu-group { padding-top: 8px; display: flex; justify-content: space-between; }
 main .sec05 .txt-box .menu-group button { position: relative;  padding: 0 14px; width: auto; margin-left: 0; border: 0; background: inherit; font-size: 14px; color: #adadad; font-weight: 500; line-height: 1.71; letter-spacing: -.7px; }
 main .sec05 .txt-box .menu-group button:last-child { padding-right: 0; }
 main .sec05 .txt-box .menu-group button:hover { color: #333; }
 main .sec05 .txt-box .menu-group button::after { content: ''; position: absolute; top: 50%; left: 0; transform: translateY(-50%); width: 1px; height: 11px; background-color: #e7e7e7; }
-main .sec05 .txt-box .menu-group button:first-child:after { display: none; }
+main .sec05 .txt-box .menu-group button:first-child::after { display: none; }
 main .sec05 .txt-box .menu button:last-child { padding-right: 0; }
 main .sec05 .img-wrap { margin-top: 30px; display:flex; justify-content: space-between;}
 main .sec05 .img-group01 { width: 57.74%; display:flex; flex-wrap: wrap; justify-content: flex-end; }
@@ -85,6 +85,7 @@ main .sec05 .img-group02 { width: 41.45%; }
 main .sec05 .img-wrap a { position: relative; }
 main .sec05 .img-wrap p { position: absolute; bottom: 16px; left: 20px; font-size: 16px; color: #fff;  letter-spacing: -.1px; }
 main .sec05 .swiper{ display: none; }
+main .sec05 .btn-group { display: none; }
 
 main .mid-banner  { position: relative; padding-top: 120px;}
 main .mid-banner .mo-img-box { display: none; }
@@ -159,7 +160,7 @@ main .sec08 .container .con-group .brand .btn.brand { border: 1px solid rgba(255
     main .sec01 .contents .swiper-slide .part { left: 12px; bottom: 15px; font-size: 16px; line-height: 14px; letter-spacing: -.11px; }
     main .sec01 .contents .swiper-pagination { display: block; height: 1.5px; top: inherit; bottom: 0; }
     main .sec01 .swiper-pagination-progressbar .swiper-pagination-progressbar-fill { background: #000; }
-        /* 슬라이드 padding값과 width값, 글자값이 안먹어요 ㅠ */
+    /* 슬라이드 padding값과 width값, 글자값이 안먹어요 ㅠ */
     
     main .sec02 { margin-top: 60px;}
     main .sec02 .container { display: flex; justify-content: left; padding-left: 0; }
@@ -197,13 +198,19 @@ main .sec08 .container .con-group .brand .btn.brand { border: 1px solid rgba(255
     main .sec04 .container .icon-group .icon-li .img-box { padding: 0 19px; width: auto; }
     main .sec04 .container .icon-group .icon-li h3 { padding-top: 3px; font-size: 14px; line-height: 1.42; letter-spacing: -.7px; color: #333; font-weight: 300; } 
 
-    main .sec05 { margin: 0 12px; padding-top: 23px; }
+    main .sec05 { border: 1px solid #000; margin: 0 12px; padding-top: 23px; }
+    main .sec05 .txt-box .container {  padding: 0;}
     main .sec05 .txt-box .tit { font-size: 22px; color: #333; line-height: 1.36; letter-spacing: -.07px; }
+    main .sec05 .txt-box .menu-group { display: none;  }
     main .sec05 .mo-main-banner { display: block; }
     main .sec05 .img-wrap { display: none; }
-    main .sec05 .swiper { display: block; }
-    
-
+    main .sec05 .swiper { display: block; margin-top: 13px; }    
+    main .sec05 .swiper .swiper-slide a { position: relative; }
+    main .sec05 .swiper .swiper-slide a p { position: absolute; left: 12px; bottom: 14px; color: #fff;}
+    main .sec05  .swiper-button-prev {  background: url(../images/icon-main-arrow-slide-active.png);  transform: rotate(-180deg);}
+    main .sec05  .swiper-button-next { background: url(../images/icon-main-arrow-slide-active.png);  }
+    main .sec05 .swiper-button-prev::after { display: none; }
+    main .sec05  .swiper-button-next::after { display: none; }
 
     main .mid-banner { padding-top: 70px; }
     main .mid-banner .img-box { display: none; }
@@ -214,6 +221,7 @@ main .sec08 .container .con-group .brand .btn.brand { border: 1px solid rgba(255
     main .sec06 .txt-box .tit { margin-top: 8px; font-size: 22px; line-height: 30px; letter-spacing: -.7px; }
     main .sec06 .txt-box .more-btn { margin-top: 20px; font-size: 12px; font-weight: 400; line-height: 1.25; }
     main .sec06 .con-group { margin-top: 14px; }
+    main .sec06 .con-group .swiper { width: 100%; }
 
     main .sec07 { padding-top: 48px;}
     main .sec07 .txt-box p { width: 84%; font-size: 18px; line-height: 1.44; letter-spacing: -.74px; word-break: keep-all; }

@@ -59,15 +59,15 @@ header .mobile-nav { display: none; }
     푸터
 ============================================================================*/
 footer { padding-top: 180px; }
+footer .wrap { background-color: #f6f5f3;  padding: 42px 0 50px;  }
 footer .top-area .container { display: flex; justify-content: space-between; }
 footer .top-area .tit { font-size: 24px; font-weight: 500; letter-spacing: -.92px; color: #707070; }
-footer .top-area { background-color: #f6f5f3; padding: 42px 0 50px; }
 footer .top-area .menu-group { display: flex; justify-content: left; }
-footer .top-area .menu-group .menu02, .menu03 { margin-left: 106px; }
+footer .top-area .menu-group .menu { margin-left: 106px; }
 footer .top-area .menu-group a { padding: 8px 0; font-size: 16px; letter-spacing: -.23px; color: #707070; }
-footer .top-area .menu-group .menu03 { width: 100px; }
-footer .top-area .menu-group .menu03 a { position: relative; }
-footer .top-area .menu-group .menu03 a::after { content: ''; background: url(../images/icon-footer-link.png) no-repeat; transform: translateY(-50%); background-size: 100% auto; width: 16px; height: 16px; position: absolute; top: 50%; right: 0; }
+footer .top-area .menu-group .menu:last-child { width: 100px; margin-left: 106px; }
+footer .top-area .menu-group .menu:last-child a { position: relative; }
+footer .top-area .menu-group .menu:last-child a::after { content: ''; background: url(../images/icon-footer-link.png) no-repeat; transform: translateY(-50%); background-size: 100% auto; width: 16px; height: 16px; position: absolute; top: 50%; right: 0; }
 /* transform: translateY(-50%); background-size: 100% auto; 이부분이 뭘 의미하는지 모르겠어요ㅠ */
 footer .mid-area .container { border-top: 1px solid #ddd; margin-top: 60px; padding-top: 25px; display: flex; justify-content: space-between; }
 footer .mid-area .txt-wrap .brand { font-size: 16px; letter-spacing: -.3px; line-height: 1.37; color: #707070; }
@@ -81,7 +81,8 @@ footer .mid-area .txt-wrap .txt-box .tel::after { content: '';  width: 1px; heig
 footer .bottom-area { padding: 16px 0; background-color: #ecebe7; }
 footer .bottom-area .container { display: flex; justify-content: space-between; align-items: center; }
 footer .bottom-area .copy { display: flex; justify-content: space-between; font-size: 14px; color: rgba(51,51,51,.7); line-height: 1.28; font-weight: 500; }
-footer .bottom-area .copy img { margin-right: 2px; width: 16px; }
+footer .bottom-area .copy .pc { margin-right: 2px; width: 16px; }
+footer .bottom-area .copy .mobile { display: none; }
 footer .bottom-area .tel { font-size: 14px; font-weight: 500; letter-spacing: -.2px; color: #707070; line-height: 1.5; }
 
 /*===========================================================================
@@ -99,9 +100,27 @@ footer .bottom-area .tel { font-size: 14px; font-weight: 500; letter-spacing: -.
     header .mobile-nav .m-menu-btn { margin-left: 9px; }
 
     footer { padding-top: 120px; }
-    footer .top-area  {padding:  32px 12px 50px; background-color: #faf9f7;}
-    footer .top-area .container { display: initial; }
-    footer .top-area .menu-group { display: initial; }
-    footer .top-area .menu-group .menu02, .menu03 { margin: 0; }
-    footer .top-area .menu-group li
-}
+    footer .wrap { background-color: #f6f5f3; padding: 0; }
+    footer .top-area {padding: 32px 12px 50px;}
+    footer .top-area .container { display: block; }
+    footer .top-area .tit { font-size: 22px; color: #333; font-weight: 500; letter-spacing: -.92px; } 
+    footer .top-area .menu-group { display: block; padding-top: 50px;  }
+    footer .top-area .menu-group .menu { border-bottom: 1px solid #ddd; margin-left: 0; margin-bottom: 30px; padding-bottom: 30px; }
+    footer .top-area .menu-group .menu:last-child { border-bottom: 0; margin-left: 0;}
+    footer .top-area .menu-group .menu a { font-size: 15px; line-height: 1.2;  font-weight: 300; color: #333; padding: 5px 0; }  
+    footer .top-area .menu-group .menu a:first-child { padding-top: 0; }
+
+    footer .mid-area { padding: 34px 12px 65px;  background-color: #ecebe7; }
+    footer .mid-area .container { display: block; border: 0; margin: 0; padding: 0; }
+    footer .mid-area .txt-wrap:first-child { padding-top: 0; }
+    footer .mid-area .txt-wrap { padding-top: 38px; }
+    footer .mid-area .txt-wrap .brand { font-size: 15px; font-weight: 500; line-height: 20px; color: #333; margin-bottom: 10px; } 
+    footer .mid-area .txt-wrap div { font-size: 14px; font-weight: 300; letter-spacing: -.2px; line-height: 1.42; color: #707070;  }
+    footer .mid-area .txt-wrap .mob.txt-box { display: block; }
+    footer .mid-area .txt-wrap .txt-box .tel::after { display: none; }
+
+    footer .bottom-area { background-color: #333; padding: 18px 0 15px; }
+    footer .bottom-area .copy { color: #fff; font-size: 15px; font-weight: 500; letter-spacing: -.1px;}
+    footer .bottom-area .copy .mobile { display: block; margin-right: 2px; width: 16px; }
+    footer .bottom-area .copy .pc { display: none; }
+    footer .bottom-area .tel { font-size: 14px; color: #fff; font-weight: 500; letter-spacing: -.09px; line-height: 1.28; }
