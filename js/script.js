@@ -32,9 +32,25 @@ var swiper = new Swiper(".contents", {
 
 
 });
-//sec01 슬라이드
-var swiper = new Swiper(".sec06 .swiper", {
+
+
+//sec05 슬라이드
+var swiper = new Swiper(".sec05 .swiper", {
     slidesPerView: 2.5,
+    spaceBetween: 10,
+    pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+});
+
+//sec06 슬라이드
+var swiper = new Swiper(".sec06 .swiper", {
+    slidesPerView: 3.5,
     spaceBetween: 32,
     breakpoints: {
         768: {
@@ -43,5 +59,4 @@ var swiper = new Swiper(".sec06 .swiper", {
         },
     },
 });
-
 

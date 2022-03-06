@@ -99,4 +99,9 @@ footer .bottom-area .tel { font-size: 14px; font-weight: 500; letter-spacing: -.
     header .mobile-nav .m-menu-btn { margin-left: 9px; }
 
     footer { padding-top: 120px; }
+    footer .top-area  {padding:  32px 12px 50px; background-color: #faf9f7;}
+    footer .top-area .container { display: initial; }
+    footer .top-area .menu-group { display: initial; }
+    footer .top-area .menu-group .menu02, .menu03 { margin: 0; }
+    footer .top-area .menu-group li
 }

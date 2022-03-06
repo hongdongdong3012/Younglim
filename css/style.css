@@ -84,7 +84,7 @@ main .sec05 .img-group01 .Edge45 { margin-top: 1.55%; width: 42.03%; }
 main .sec05 .img-group02 { width: 41.45%; }
 main .sec05 .img-wrap a { position: relative; }
 main .sec05 .img-wrap p { position: absolute; bottom: 16px; left: 20px; font-size: 16px; color: #fff;  letter-spacing: -.1px; }
-main .sec05 .img-wrap .mo-main-banner { display: none; }
+main .sec05 .swiper{ display: none; }
 
 main .mid-banner  { position: relative; padding-top: 120px;}
 main .mid-banner .mo-img-box { display: none; }
@@ -200,8 +200,9 @@ main .sec08 .container .con-group .brand .btn.brand { border: 1px solid rgba(255
     main .sec05 { margin: 0 12px; padding-top: 23px; }
     main .sec05 .txt-box .tit { font-size: 22px; color: #333; line-height: 1.36; letter-spacing: -.07px; }
     main .sec05 .mo-main-banner { display: block; }
-    /* main .sec05 .img-wrap { display: none; } */
-    main .sec05 .mo-img-group .swiper-slide { width: 310px; margin-right: 10px; }
+    main .sec05 .img-wrap { display: none; }
+    main .sec05 .swiper { display: block; }
+    
 
 
     main .mid-banner { padding-top: 70px; }
