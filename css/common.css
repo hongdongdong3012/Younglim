@@ -26,12 +26,11 @@ label { display: block; font-size: 18px; }
 button { border: 0; background: inherit; cursor: pointer; font-size:15px; } 
 a { display: block; text-decoration: none; } 
 input[type="text"], input[type="password"], input[type="email"], button, textarea { border: 1px solid #e1e1e1; appearance: none; -moz-appearance: none; -webkit-appearance: none; border-radius: 0; -webkit-border-radius: 0; -moz-border-radius: 0; } 
-input[type="text"], input[type="password"], input[type="email"], input[type="tel"] { border:0; border-bottom: 1px solid #e3e3e5; background: inherit; padding:12px 30px 12px 0; } 
-input::placeholder { font-weight: 400; color:#767676; } 
+input[type="text"], input[type="password"], input[type="email"], input[type="tel"] { border:0; background: inherit; } 
 textarea { resize: none; padding: 14px; font-size: 16px; } 
 .col-group { display: flex; align-items: center; } 
 .btn-group { text-align: center; } 
-.btn-group button { font-size: 14px; font-weight: 400; position: relative; margin: 0 auto; padding: 0; width: 144px; border: 1px solid #d3d3d3; text-align: center; height: 50px; line-height: 50px; } 
+/* .btn-group button { font-size: 14px; font-weight: 400; position: relative; margin: 0 auto; padding: 0; width: 144px; border: 1px solid #d3d3d3; text-align: center; height: 50px; line-height: 50px; }  */
 pre { display: inline-block; white-space: pre-wrap; } 
 .wrap { overflow: hidden; } 
 /*===========================================================================
@@ -45,18 +44,62 @@ pre { display: inline-block; white-space: pre-wrap; }
 ============================================================================*/
 header {z-index: 1000; position: fixed; top:0; left: 0; width: 100%; padding: 20px 0;}
 header .top-wrap { display: flex; justify-content: space-between; }
-header .logo-group { display: flex; align-items: center;}
-header .logo-group .logo a { width: 142px; }
-header .logo-group .gnb-group { display: flex;  margin-left: 19px; }
-header .logo-group .gnb-group li { font-size: 16px; }
-header .logo-group .gnb-group li a { color: #fff;  padding: 0 15px; }
+header .top-group { display: flex; align-items: center;}
+header .top-group .logo a { width: 142px; }
+header .top-group .gnb-group { display: flex;  margin-left: 19px; }
+header .top-group .gnb-group li { font-size: 16px; }
+header .top-group .gnb-group li a { color: #fff;  padding: 0 15px; }
 header nav { display: flex; justify-content: left; align-items: center; }
 header nav button { margin-left: 20px; border: 0; width: 30px; height: 30px; }
 header nav .menu-btn { margin-left: 9px; }
-header .mobile-nav { display: none; }
+header .mobile { display: none; }
+
+/* 메뉴 드롭다운 */
+header .drop-area { width: 100%; position: absolute; top: 0; z-index: 10; background: #fff; }
+header .drop-area .top-wrap { padding: 20px 0; }
+header .drop-area .gnb-group li a { color: #333; font-size: 16px; font-weight: 500; }
+header .drop-area .product-wrap { display: flex; padding: 16px 0 49px; }
+header .drop-area .product-wrap a { color: #333; font-weight: 300; font-size: 14px; line-height: 1.42; letter-spacing: -.7px; }
+header .drop-area .product-wrap .con { width: 172px; }
+header .drop-area .product-wrap .con::after { width: 1px; }
+header .drop-area .product-wrap .con .tit { font-weight: 500; color: #f02c2c; } 
+header .drop-area .product-wrap .con a { position: relative; width: 164px; height: 32px; font-size: 14px; font-weight: 300; letter-spacing: -.1px; line-height: 2.28; color: #333; padding-left: 18px; }
+header .drop-area .product-wrap .con:nth-child(2) { border-left: 1px solid #e7e7e7; border-right: 1px solid #e7e7e7; }
+header .drop-area .product-wrap .con:last-child {  content: ''; position: relative; margin-left: 24px; margin-right: 40px; }
+header .drop-area .product-wrap .con:last-child a {position: relative;  padding-left: 0; width: 210px; height: 40px; font-size: 14px; font-weight: 500; letter-spacing: -.7px; line-height: 2.71; color: #333; border-top: 1px solid #d8d8d8; }
+header .drop-area .product-wrap .con:last-child div { font-size: 14px; letter-spacing: -.7px; line-height: 22px; color: #707070; word-break: keep-all;  }
+header .drop-area .product-wrap .con:last-child .img-box { width: 160px; margin-left: 50px; position: absolute;  left: 52px   top: 5px;  margin-right: -30px; }
+header .drop-area .product-wrap .con:last-child a::after { content: ''; display: block; width: 30px; height: 30px; position: absolute; transform: translateY(-50%); top: 50%; right: 0; z-index: 10; background: url(../images/icon-arrow.png);  background-size: 100% auto; }
+header .drop-area .product-wrap .swiper { width: 417px; position: relative; padding-bottom: 24px; }
+header .drop-area .product-wrap .swiper-pagination { content: ''; position: absolute; bottom: 0; width: 100%; }
+header .drop-area .product-wrap .swiper-pagination-bullet { width: 5px; height: 5px; border-radius: 50%;  }
+header .drop-area .product-wrap .swiper-pagination-bullet-active { background: #333; }
+header .search .menu-group .container { display: flex;  padding-top: 30px; padding-bottom: 114px; }
+header .search .menu-group .search-wrap { width: 86%; margin-top: -10px; padding-right: 65px; }
+
+/* 서치 드롭다운 */
+header .search .menu-group .search-txt { width: 14%; padding-right: 20px; font-size: 14px; color: #333; line-height: 1.28; letter-spacing: -.12px; } 
+header .search .menu-group .search-bar { padding: 0 50px 16px 0;  border-bottom: 1px solid #707070; }
+header .search .menu-group .search-bar .inputfield { font-size: 38px; letter-spacing: -1.48px; line-height: 1.47; font-weight: 400; color: #e0e0e0; }
+header .search .menu-group ul { display: flex; margin-top: 14px; }
+header .search .menu-group ul .tit { margin-left: 0; font-size: 12px; font-weight: 300; letter-spacing: -.6px; line-height: 1.66; color: #707070; }
+header .search .menu-group ul li { margin-left: 12px; font-size: 14px; font-weight: 400; letter-spacing: -.7px;  line-height: 20px;  color: #333;  }
+
+
+/* 위시리스트 드롭다운 */
+header .wish-area { position: absolute; top: 0; z-index: 1000; width: 100vw; height: 100vh; background-color: rgba(0,0,0,.3); }
+header .wish-area .txt-box { position: absolute; top: 40%; left: 50%; transform: translateX(-50%); width: 430px; padding: 40px 40px 50px; background: #fff; box-shadow: 0 5px 40px 0 rgb(0 0 0 / 14%); }
+header .wish-area .txt-box .con { font-size: 14px; font-weight: 300; letter-spacing: -.7px; line-height: 1.42; color: #333; text-align: center; }
+header .wish-area .btn-box { padding-top: 26px; width: 100%;  text-align: center; }
+header .wish-area .btn-box button {border: 1px solid #000; width: 87px; height: 38px; font-size: 15px; line-height: 2.4;  border: 1px solid #333;  font-weight: 500; letter-spacing: -.7px; text-align: center;}
+header .wish-area .btn-box .no { background-color: #fff; color: #333; }
+header .wish-area .btn-box .yes { margin-left: 10px;  background-color: #333; color: #fff;}
+
+
+
 
 /*===========================================================================
-    푸터
+푸터
 ============================================================================*/
 footer { padding-top: 180px; }
 footer .wrap { background-color: #f6f5f3;  padding: 42px 0 50px;  }
@@ -85,6 +128,7 @@ footer .bottom-area .copy .pc { margin-right: 2px; width: 16px; }
 footer .bottom-area .copy .mobile { display: none; }
 footer .bottom-area .tel { font-size: 14px; font-weight: 500; letter-spacing: -.2px; color: #707070; line-height: 1.5; }
 
+
 /*===========================================================================
     반응형
 ============================================================================*/
@@ -94,12 +138,36 @@ footer .bottom-area .tel { font-size: 14px; font-weight: 500; letter-spacing: -.
 }
 
 @media(max-width:768px) { 
-    header nav { display: none; }
-    header .mobile-nav { display: block;  display: flex; }
-    header .mobile-nav button { width: 30px; border: 0 }
-    header .mobile-nav .m-menu-btn { margin-left: 9px; }
+    header { padding: 0; }
+    header .top-wrap .gnb-group { display: none; }
+    header .top-wrap nav { display: none; }
+    header .drop-area { display: none; }
+    header .top-group { justify-content: space-between; align-items: center; width: 100%; height: 50px; }
+    header .logo a { width: 142px; height: 30px; }
+    header .mobile.nav .m-menu-btn { margin-left: 9px; }
 
-    footer { padding-top: 120px; }
+    header .mobile { position: fixed; width: 100vw; height: 100vh; top: 0; left: 0; display: block; background: #fff;  }
+    header .mobile .top-group { height: 50px; padding: 0 12px; display: flex; justify-content: space-between;  align-items: center; }
+    header .mobile button { width: 30px; border: 0;  }
+    header .mobile.nav { display: block; }
+    header .mobile.nav .m-menu-btn { margin-left: 9px;  }
+    header .mobile.menu .gnb-group { padding-left: 16px; padding-top: 32px; }
+    header .mobile.menu .gnb-group button { font-size: 22px; color: #333; line-height: 1.9; letter-spacing: -.7px; font-weight: 500; width: auto; display: block;}
+    header .mobile.menu .bottom-menu { padding-left: 16px; position: absolute; bottom: 98px; width: 100%; }
+    header .mobile.menu .bottom-menu a { color: #707070; line-height: 30px; letter-spacing: -.7px; font-weight: 400; }
+    header .mobile.menu .sns { display: flex; position: absolute; bottom: 0; height: 50px; border-top: 1px solid #8d8d8d; width: 100%; padding-top: 5px;  }
+    header .mobile.menu .sns a {  width: 38px; height: 38px; background-size: 100%; background-repeat: no-repeat; background-position: 0 0; margin-left: 8px; }
+    header .mobile.menu .sns a:first-child { margin-left: 3px; padding-left: 0; } 
+
+    header .mobile.search .con-group { padding: 15px 12px 0; }
+    header .mobile.search .search-bar { border-bottom: 1px solid #707070; position: relative;}
+    header .mobile.search .search-bar input { padding-left: 35px; padding-bottom: 9px; height: auto; font-size: 18px; font-weight: 300; line-height: 1.33; letter-spacing: -.7px; }
+    header .mobile.serach .search-bar input::before { content: "";  width: 10px; height: 10px; position: absolute; top: -4px; left: -6px; z-index: 1000; background: url(../images/icon-arrow.png) no-repeat; border: 1px solid #000; }
+    header .mobile.search .keyword-group { margin-top: 40px; }
+    header .mobile.search .keyword-group div { margin-bottom: 13px; font-size: 14px; font-weight: 400; line-height: 1.71; letter-spacing: -.61px; color: #707070;}
+    header .mobile.search .keyword-group button { font-size: 20px; font-weight: 500; line-height: 2; letter-spacing: -.58px; display: block; width: auto; }
+
+    footer { padding-top: 120px; }    
     footer .wrap { background-color: #f6f5f3; padding: 0; }
     footer .top-area {padding: 32px 12px 50px;}
     footer .top-area .container { display: block; }
@@ -109,7 +177,7 @@ footer .bottom-area .tel { font-size: 14px; font-weight: 500; letter-spacing: -.
     footer .top-area .menu-group .menu:last-child { border-bottom: 0; margin-left: 0;}
     footer .top-area .menu-group .menu a { font-size: 15px; line-height: 1.2;  font-weight: 300; color: #333; padding: 5px 0; }  
     footer .top-area .menu-group .menu a:first-child { padding-top: 0; }
-
+    
     footer .mid-area { padding: 34px 12px 65px;  background-color: #ecebe7; }
     footer .mid-area .container { display: block; border: 0; margin: 0; padding: 0; }
     footer .mid-area .txt-wrap:first-child { padding-top: 0; }
@@ -118,9 +186,17 @@ footer .bottom-area .tel { font-size: 14px; font-weight: 500; letter-spacing: -.
     footer .mid-area .txt-wrap div { font-size: 14px; font-weight: 300; letter-spacing: -.2px; line-height: 1.42; color: #707070;  }
     footer .mid-area .txt-wrap .mob.txt-box { display: block; }
     footer .mid-area .txt-wrap .txt-box .tel::after { display: none; }
-
+    
     footer .bottom-area { background-color: #333; padding: 18px 0 15px; }
     footer .bottom-area .copy { color: #fff; font-size: 15px; font-weight: 500; letter-spacing: -.1px;}
     footer .bottom-area .copy .mobile { display: block; margin-right: 2px; width: 16px; }
     footer .bottom-area .copy .pc { display: none; }
     footer .bottom-area .tel { font-size: 14px; color: #fff; font-weight: 500; letter-spacing: -.09px; line-height: 1.28; }
+}
+
+
+
+
+
+
+
