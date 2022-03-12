@@ -74,20 +74,20 @@ header .drop-area .product-wrap .swiper { width: 417px; position: relative; padd
 header .drop-area .product-wrap .swiper-pagination { content: ''; position: absolute; bottom: 0; width: 100%; }
 header .drop-area .product-wrap .swiper-pagination-bullet { width: 5px; height: 5px; border-radius: 50%;  }
 header .drop-area .product-wrap .swiper-pagination-bullet-active { background: #333; }
-header .search .menu-group .container { display: flex;  padding-top: 30px; padding-bottom: 114px; }
-header .search .menu-group .search-wrap { width: 86%; margin-top: -10px; padding-right: 65px; }
 
 /* 서치 드롭다운 */
-header .search .menu-group .search-txt { width: 14%; padding-right: 20px; font-size: 14px; color: #333; line-height: 1.28; letter-spacing: -.12px; } 
-header .search .menu-group .search-bar { padding: 0 50px 16px 0;  border-bottom: 1px solid #707070; }
-header .search .menu-group .search-bar .inputfield { font-size: 38px; letter-spacing: -1.48px; line-height: 1.47; font-weight: 400; color: #e0e0e0; }
-header .search .menu-group ul { display: flex; margin-top: 14px; }
-header .search .menu-group ul .tit { margin-left: 0; font-size: 12px; font-weight: 300; letter-spacing: -.6px; line-height: 1.66; color: #707070; }
-header .search .menu-group ul li { margin-left: 12px; font-size: 14px; font-weight: 400; letter-spacing: -.7px;  line-height: 20px;  color: #333;  }
+header .search-area .menu-group .container { display: flex; padding-top: 30px; padding-bottom: 114px; }
+header .search-area .menu-group .search-wrap { width: 86%; margin-top: -10px; padding-right: 65px; }
+header .search-area .menu-group .search-txt { width: 14%; padding-right: 20px; font-size: 14px; color: #333; line-height: 1.28; letter-spacing: -.12px; } 
+header .search-area .menu-group .search-bar { padding: 0 50px 16px 0;  border-bottom: 1px solid #707070; }
+header .search-area .menu-group .search-bar .inputfield { font-size: 38px; letter-spacing: -1.48px; line-height: 1.47; font-weight: 400; color: #e0e0e0; }
+header .search-area .menu-group ul { display: flex; margin-top: 14px; }
+header .search-area .menu-group ul .tit { margin-left: 0; font-size: 12px; font-weight: 300; letter-spacing: -.6px; line-height: 1.66; color: #707070; }
+header .search-area .menu-group ul li { margin-left: 12px; font-size: 14px; font-weight: 400; letter-spacing: -.7px;  line-height: 20px;  color: #333;  }
 
 
 /* 위시리스트 드롭다운 */
-header .wish-area { position: absolute; top: 0; z-index: 1000; width: 100vw; height: 100vh; background-color: rgba(0,0,0,.3); }
+header .wish-area { position: absolute; top: 0; left: 0; z-index: 1000; width: 100vw; height: 100vh; background-color: rgba(0,0,0,.3); }
 header .wish-area .txt-box { position: absolute; top: 40%; left: 50%; transform: translateX(-50%); width: 430px; padding: 40px 40px 50px; background: #fff; box-shadow: 0 5px 40px 0 rgb(0 0 0 / 14%); }
 header .wish-area .txt-box .con { font-size: 14px; font-weight: 300; letter-spacing: -.7px; line-height: 1.42; color: #333; text-align: center; }
 header .wish-area .btn-box { padding-top: 26px; width: 100%;  text-align: center; }
