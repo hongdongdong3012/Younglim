@@ -27,7 +27,27 @@ $(document).ready(function () {
         }
     })
 
+    //헤더 위시리스트 클릭시 선택창 생성
+    $('header nav .like-btn').click(function () {
+        $('.wish-area').show()
+        $('.wish-area-bg').show()
+    })
+
+    $('.wish-area button').click(function () {
+        $('.wish-area').hide()
+        $('.wish-area-bg').hide()
+    })
+
+
+    $('.wish-area-bg').click(function () {
+        $('.wish-area').hide()
+        $('.wish-area-bg').hide()
+    })
+
 });
+
+//AOS
+AOS.init();
 
 
 

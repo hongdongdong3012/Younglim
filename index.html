@@ -8,6 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -120,16 +121,6 @@
                 </div>
             </div>
         </div>
-        <!--pc 위시리스트 드롭다운 -->
-        <!-- <div class="wish-area">
-            <div class="txt-box">
-                <div class="con">위시리스트는 회원 전용 서비스입니다.<br>로그인하시겠습니까?</div>
-                <div class="btn-box">
-                    <button class="no">아니요</button>
-                    <button class="yes">예</button>
-                </div>
-            </div>
-        </div> -->
 
         <!-- 모바일 서치클릭 -->
         <!-- <div class="mobile search">
@@ -329,7 +320,8 @@
             </div>
             <div class="style-cont-wrap">
                 <div class="container">
-                    <div class="style-box01">
+                    <div class="style-box01" data-aos="fade-up" data-aos-easing="ease-out-cubic"
+                        data-aos-duration="1000">
                         <div class="img-box">
                             <img src="./images/main-2-img-modern-1.jpg" alt="">
                         </div>
@@ -338,17 +330,20 @@
                             <span class="place">Livingroom</span>
                         </div>
                     </div>
-                    <div class="style-box02">
+                    <div class="style-box02" data-aos="fade-up" data-aos-easing="ease-out-cubic"
+                        data-aos-duration="1000">
                         <div class="img-box">
                             <img src="./images/main-2-img-modern-2.jpg" alt="">
                         </div>
-                        <div class="txt-box">
+                        <div class="txt-box" data-aos="fade-up">
                             <span>Monochrome Photograph</span>
                             <span class="place">Entrance</span>
                         </div>
                     </div>
-                    <h3 class="tit">Modern</h3>
-                    <div class="style-box03">
+                    <h3 class="tit">
+                        <div data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="1000">Modern</div>
+                    </h3>
+                    <div class="style-box03" data-aos="fade-up">
                         <div class="img-box">
                             <img src="./images/main-2-img-modern-3.jpg" alt="">
                         </div>
@@ -776,8 +771,20 @@
         </div>
     </footer>
 
+    <!--pc 위시리스트 드롭다운 -->
+    <div class="wish-area-bg"></div>
+    <div class="wish-area">
+        <div class="txt-box">
+            <div class="con">위시리스트는 회원 전용 서비스입니다.<br>로그인하시겠습니까?</div>
+            <div class="btn-box">
+                <button class="no">아니요</button>
+                <button class="yes">예</button>
+            </div>
+        </div>
+    </div>
     <!-- Swiper js -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./js/script.js"></script>
 </body>
