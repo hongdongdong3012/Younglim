@@ -1,3 +1,36 @@
+$(document).ready(function () {
+    // 헤더 호버시 색상 추가
+    $('header').mouseover(function () {
+        $('header').addClass('active')
+    })
+    $('header').mouseleave(function () {
+        $('header').removeClass('active')
+    })
+
+    //헤더 네비 호버시 메뉴 생성
+    $('header .top-group .gnb-group li a').mouseover(function () {
+        $('header .drop-down-area').show()
+    })
+    $('header').mouseleave(function () {
+        $('header .drop-down-area').hide()
+    })
+
+    //헤더 서치 클릭시 검색창 생성
+    $('header nav .search-btn').click(function () {
+        $('header .search-area').show()
+        $('header .search-area').addClass('active')
+
+        if ($('header .search-area').hasClass('active')) {
+            console.log(1);
+            $('header').addClass('active');
+            return
+        }
+    })
+
+});
+
+
+
 //헤더 드롭 슬라이드
 var swiper = new Swiper("header .drop-area .product-wrap .swiper", {
     spaceBetween: 30,
