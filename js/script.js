@@ -15,17 +15,35 @@ $(document).ready(function () {
         $('header .drop-down-area').hide()
     })
 
+    $('header')
+
+
     //헤더 서치 클릭시 검색창 생성
     $('header nav .search-btn').click(function () {
+        // $('header').addClass('active')
+        $('header').animate({ height: '321px' })
         $('header .search-area').show()
-        $('header .search-area').addClass('active')
+        $('header').mouseleave(function () {
+            $('header').addClass('active')
+            $('header').show()
+        })
 
-        if ($('header .search-area').hasClass('active')) {
-            console.log(1);
-            $('header').addClass('active');
-            return
-        }
+
+        // if ($('header .search-area').hasClass('active')) {
+        //     $('header').addClass('active');
+        //     return
+        // }
     })
+
+    $('main').click(function () {
+        $('header').stop().animate({ height: '70px' })
+        $('header').addClass('active')
+        $('header .search-area').hide()
+
+    })
+
+
+
 
     //헤더 위시리스트 클릭시 선택창 생성
     $('header nav .like-btn').click(function () {
@@ -43,6 +61,31 @@ $(document).ready(function () {
         $('.wish-area').hide()
         $('.wish-area-bg').hide()
     })
+
+    // 모바일 헤더 호버시 색상 추가
+    $('header').mouseover(function () {
+        $('header').addClass('m-active')
+    })
+    $('header').mouseleave(function () {
+        $('header').removeClass('m-active')
+    })
+
+
+    // 모바일 메뉴 클릭시 리스트생성
+    $('header .mobile.nav .m-btn .m-active').click(function () {
+        $('header').addClass('m-menu-active')
+        $('header .m-menu-active').show()
+    })
+    $('header .mobile.nav .m-btn .m-close-btn').click(function () {
+        $('header').removeClass('m-menu-active')
+    })
+
+    // //모바일 서치 클릭시 검색창 생성
+    // $('header .m-search-btn').click(function(){
+    //     $('header .mobile.nav ')
+    // })
+
+
 
 });
 
@@ -65,6 +108,7 @@ var swiper = new Swiper("header .drop-area .product-wrap .swiper", {
     },
 
 });
+
 
 //메인 배너 슬라이드
 var swiper = new Swiper(".main-banner", {
