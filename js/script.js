@@ -22,10 +22,9 @@ $(document).ready(function () {
     $('header nav .search-btn').click(function () {
         // $('header').addClass('active')
         $('header').animate({ height: '321px' })
-        $('header .search-area').show()
+        $('header .search-area').slideDown()
         $('header').mouseleave(function () {
             $('header').addClass('active')
-            $('header').show()
         })
 
 
@@ -36,10 +35,10 @@ $(document).ready(function () {
     })
 
     $('main').click(function () {
-        $('header').stop().animate({ height: '70px' })
         $('header').addClass('active')
         $('header .search-area').hide()
-
+        $('header .search-area').slideUp()
+        $('header').animate({ height: '64px' })
     })
 
 
@@ -61,6 +60,28 @@ $(document).ready(function () {
         $('.wish-area').hide()
         $('.wish-area-bg').hide()
     })
+
+
+
+    //sec05 메뉴 호버시 창이동
+    var menu = ['.img-wrap', 'Slide 2', 'Slide 3']
+    var mySwiper = new Swiper('.sec05 .swiper-container', {
+        // If we need pagination
+        pagination: {
+            el: '.sec05 .swiper-pagination',
+            clickable: true,
+            renderBullet: function (index, className) {
+                return '<span class="' + className + '">' + (menu[index]) + '</span>';
+            },
+        },
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    })
+
 
     // 모바일 헤더 호버시 색상 추가
     $('header').mouseover(function () {
