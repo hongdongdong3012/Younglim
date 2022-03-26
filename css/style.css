@@ -78,15 +78,25 @@ main .sec05 .txt-box .menu-group button:hover { color: #333; }
 main .sec05 .txt-box .menu-group button::after { content: ''; position: absolute; top: 50%; left: 0; transform: translateY(-50%); width: 1px; height: 11px; background-color: #e7e7e7; }
 main .sec05 .txt-box .menu-group button:first-child::after { display: none; }
 main .sec05 .txt-box .menu button:last-child { padding-right: 0; }
-main .sec05 .img-wrap { margin-top: 30px; display:flex; justify-content: space-between;}
-main .sec05 .img-group01 { width: 57.74%; display:flex; flex-wrap: wrap; justify-content: flex-end; }
-main .sec05 .img-group01 .Edge45 { margin-top: 1.55%; width: 42.03%; }
-main .sec05 .img-group02 { width: 41.45%; }
-main .sec05 .img-wrap a { position: relative; }
-main .sec05 .img-wrap p { position: absolute; bottom: 16px; left: 20px; font-size: 16px; color: #fff;  letter-spacing: -.1px; }
-main .sec05 .swiper{ display: none; }
+main .sec05 .swiper { width: 100%; border: 1px solid #000;  display: block;}
+main .sec05 .swiper .img-wrap { margin-top: 30px; display:flex; justify-content: space-between; width: 100%; }
+main .sec05 .swiper .img-group01 { width: 57.74%; display:flex; flex-wrap: wrap; justify-content: flex-end; }
+main .sec05 .swiper .img-group01 .Edge45 { margin-top: 1.55%; width: 42.03%; }
+main .sec05 .swiper .img-group02 { width: 41.45%; }
+main .sec05 .swiper .img-wrap a { position: relative; }
+main .sec05 .swiper .img-wrap p { position: absolute; bottom: 16px; left: 20px; font-size: 16px; color: #fff;  letter-spacing: -.1px; }
+main .sec05 .swiper .img-group03 { width: 604px; } 
+main .sec05 .swiper .img-group03 .img-box  { display: block; background: url(../images/sec05-2-1.png);  height: 604px;  background-repeat: no-repeat; background-size: 100%; background-position: top-left center; }
+main .sec05 .swiper .img-group04 { width: calc(100% - 614px); }
+main .sec05 .swiper .img-group04 a:first-child .img-box { border: 1px solid #000; display: block; background: url(../images/sec05-2-2.png);  height: 350px;  background-repeat: no-repeat; background-size: 100%; background-position: top;  }
+main .sec05 .swiper .img-group04 a:last-child .img-box { margin-top: 10px;  display: block; background: url(../images/sec05-2-3.png);  height: 350px;  background-repeat: no-repeat; background-size: 100%; background-position: top 353px;  }
+/* main .sec05 .swiper .btn-group {  display: block; position: absolute; right: 300px; top: 0; z-index: 100;  width: 400px; height: 30px; border: 1px solid #000;} */
+
+main .sec05 .mobile.swiper { display: none; }
+
+/* main .sec05 .swiper{ display: none; }
 main .sec05 .btn-group { display: none; }
-main .sec05 .swiper-container { display: block; }
+main .sec05 .swiper { display: block; } */
 
 main .mid-banner  { position: relative; padding-top: 120px;}
 main .mid-banner .mo-img-box { display: none; }
@@ -159,7 +169,7 @@ main .sec08 .container .con-group .brand .btn.brand { border: 1px solid rgba(255
     main .sec01 .contents .swiper-wrapper { padding-left: 12px; margin-top: 30px; }
     main .sec01 .contents .swiper-wrapper .swiper-slide { width: 39% }
     main .sec01 .contents .swiper-slide .part { left: 12px; bottom: 15px; font-size: 16px; line-height: 14px; letter-spacing: -.11px; }
-    main .sec01 .contents .swiper-pagination {display: block; height: 1.5px; top: initial; bottom: 0;  }
+    main .sec01 .contents .swiper-pagination {  display: block; height: 1.5px; top: initial; left: 20px;  width: calc(100% - 30px); bottom: 0;  }
     main .sec01 .swiper-pagination-progressbar .swiper-pagination-progressbar-fill { background: #000; }
     
     main .sec02 { margin-top: 60px;}

@@ -43,7 +43,7 @@ pre { display: inline-block; white-space: pre-wrap; }
 /*===========================================================================
     헤더
 ============================================================================*/
-header {z-index: 1000; position: fixed; top:0; left: 0; width: 100%;  }
+header {z-index: 1000; position: fixed; top:0; left: 0; width: 100%; transition: 0.3s;  }
 header .top-wrap { display: flex; justify-content: space-between; }
 header .top-group { display: flex; align-items: center;}
 header .top-group .logo a { width: 142px; }
@@ -53,21 +53,24 @@ header .top-group .gnb-group li a { color: #fff;  padding: 20px 15px; }
 header nav { display: flex; align-items: center; }
 header nav button { margin-left: 20px; border: 0; width: 30px; height: 30px; }
 header nav .menu-btn { margin-left: 9px; }
-header .mobile { display: none; }
-header nav button .active { display: none; }
-header .top-group .logo a .active { display: none; }
+
 header.active { background: #fff; }
 header.active .top-group .gnb-group li a { color: #333; }
 header.active nav button .active { display: block; }
-header.active nav button img:first-child { display: none; }
 header.active .top-group .logo a .active { display: block; }
+header.active nav button img:first-child { display: none; }
 header.active .top-group .logo a img:first-child { display: none; }
-header .m-active { display: none; }
-header .mobile.nav { display: none; }
+
+header .top-group .logo a .active { display: none; }
+header nav .m-active { display: none; }
+header nav .active { display: none; }
+header nav .m-btn { display: none; }
+header .mobile-menu { display: none; }
+header .mobile-search { display: none; }
 
 
 /* 메뉴 드롭다운 */
-header .drop-down-area {display: none; width: 100%; position: absolute; top: 64px; z-index: 10; background: #fff; }
+header .drop-down-area {display: none; width: 100%; position: absolute; top: 64px; z-index: 10; background: #fff; transition: 0.1s;}
 /* header .drop-area.show {display: block;} */
 header .gnb-group li a { color: #333; font-size: 16px; font-weight: 500; }
 header .product-wrap { display: flex; padding: 16px 0 49px; }
@@ -89,7 +92,6 @@ header .product-wrap .swiper-pagination-bullet-active { background: #333; }
 
 /* 서치 드롭다운 */
 header .search-area { background: #fff; display: none; width: 100%;  position: absolute; top: 64px; }
-header .search-area.active {}
 header .search-area .menu-group .container { display: flex; padding-top: 30px; padding-bottom: 114px; }
 header .search-area .menu-group .search-wrap { width: 86%; margin-top: -10px; padding-right: 65px; }
 header .search-area .menu-group .search-txt { width: 14%; padding-right: 20px; font-size: 14px; color: #333; line-height: 1.28; letter-spacing: -.12px; } 
@@ -153,57 +155,77 @@ footer .bottom-area .tel { font-size: 14px; font-weight: 500; letter-spacing: -.
 }
 
 @media(max-width:768px) { 
+    header .top-wrap .gnb-group { display: none; }
+    header .top-wrap .pc.nav { display: none; }
+    header .like-btn { display: none; }
+    header .login-btn { display: none; }
+    header .m-close-btn { display: none; }
+    header .m-btn .m-active { display: none; }
+    header .mobile-menu { display: none; }
+
     .container { padding: 0 12px; }
     header { padding: 0; }
     header .top-wrap { width: 100%; height: 50px; justify-content: space-between; align-items: center;}
-    header .top-wrap .gnb-group { display: none; }
-    header .top-wrap .pc.nav { display: none; }
     header .logo a { width: 142px; height: 30px; display: block; }
-    header .mobile.nav { display: flex; justify-content: left;}
-    header .mobile.nav button { width: 30px; height: 30px; }
-    header .mobile.nav .m-btn { margin-left: 9px; }
-    header .mobile.nav .m-menu-active { display: none; }
-    header .m-menu-active { display: none; }
-    header .m-close-btn { display: none; }
+    header .pc.nav .search-btn .m-active { display: block;  }
+    header nav { display: flex; justify-content: left;}
+    header nav button { width: 30px; height: 30px; }
+    header nav .m-btn  { display: block; margin-left: 9px; }
+    
+    
+    
+    /* 모바일 헤더오버창 */
+    header.active { background: #fff;}
+    header.active .top-group .logo img:nth-child(2) { display: block; }
+    header.active .search-btn .m-active { display: block; }
+    header.active .m-btn .m-active { display: block; }
+    header.active .top-group .logo img:first-child { display: none; }
+    header.active .search-btn .active { display: none; }
+    header.active .m-btn .m-menu-btn { display: none; }
 
-    header.m-active { background: #fff;}
-    header.m-active .top-group .logo img:first-child { display: none; }
-    header.m-active .top-group .logo img:nth-child(2) { display: none; }
-    header.m-active .top-group .logo .m-active { display: block; }
-    header.m-active .mobile.nav img:first-child { display: none; }
-    header.m-active .mobile.nav .m-active { display: block; }
     
+    /* 모바일 서치클릭창 */
+    header.m-search-active { transition: none; }
+    header.m-search-active .search-btn { display: none; }
+    header.m-search-active nav .search-btn { display: none; }
+    header.m-search-active nav .m-btn .m-menu-btn { display: none; }
+    header.m-search-active nav .m-btn .m-active { display: none; }
+    header.m-search-active .m-btn .m-close-btn { display: block; }
     
+    header .mobile-search { position: relative;  background: #fff; width:100vw; height:100vh; }
+    header .mobile-search .con-group { padding: 15px 12px 0; }
+    header .mobile-search .search-bar { border-bottom: 1px solid #707070; position: relative;}
+    header .mobile-search .search-bar input { padding-bottom: 9px; height: auto; font-size: 18px; font-weight: 300; line-height: 1.33; letter-spacing: -.7px; }
+    header .mobile-search .search-bar input::before { content: '';  width: 30px; height: 30px; position: absolute;  top: -4px; left: -6px; z-index: 1000; background: url(../images/icon-gnb-search-mobile.png); background-size: 30px 30px; border: 1px solid #000; }
+    header .mobile-search .keyword-group { margin-top: 40px; }
+    header .mobile-search .keyword-group div { margin-bottom: 13px; font-size: 14px; font-weight: 400; line-height: 1.71; letter-spacing: -.61px; color: #707070;}
+    header .mobile-search .keyword-group button { font-size: 20px; font-weight: 500; line-height: 2; letter-spacing: -.58px; display: block; width: auto; }
+    
+
+    /* 모바일 메뉴클릭창 */
+    header.m-menu-active { transition: none; }
+    header.m-menu-active button img:first-child { display: none; }
+    header.m-menu-active .m-btn .m-menu-btn { display: none; }
+    header.m-menu-active .m-btn .m-active { display: none; }
+    header.m-menu-active .mobile-search { display: none; }
+
+    header.m-menu-active .search-btn .m-active  { display: block; }
+    header.m-menu-active .m-btn .m-close-btn { display: block; }
     /* header .mobile { position: fixed; width: 100vw; height: 100vh; top: 0; left: 0; display: block; background: #fff;  } */
-    header .mobile.search { position: absolute; top: 50px; }
-    header .mobile.search .con-group { padding: 15px 12px 0; }
-    header .mobile.search .search-bar { border-bottom: 1px solid #707070; position: relative;}
-    header .mobile.search .search-bar input { padding-left: 35px; padding-bottom: 9px; height: auto; font-size: 18px; font-weight: 300; line-height: 1.33; letter-spacing: -.7px; }
-    header .mobile.search .search-bar input::before { content: "";  width: 30px; height: 30px; position: absolute; top: -4px; left: -6px; z-index: 1000; background: url(../images/icon-arrow.png) 0 0 no-repeat; border: 1px solid #000; }
-    header .mobile.search .keyword-group { margin-top: 40px; }
-    header .mobile.search .keyword-group div { margin-bottom: 13px; font-size: 14px; font-weight: 400; line-height: 1.71; letter-spacing: -.61px; color: #707070;}
-    header .mobile.search .keyword-group button { font-size: 20px; font-weight: 500; line-height: 2; letter-spacing: -.58px; display: block; width: auto; }
     
-    header .mobile.menu { top: 0;  position: relative;  width: 100%; height: 100%; display: none; }
+    header .mobile-menu { position: relative; background: #fff; width: 100vw;  height: calc(100vh - 50px);  }
     /* header .mobile .top-group { height: 50px; padding: 0 12px; display: flex; justify-content: space-between;  align-items: center; }
     header .mobile button { width: 30px; border: 0;  } */
-    header .mobile.menu .gnb-group {  padding-left: 16px; padding-top: 32px; }
-    header .mobile.menu .gnb-group button { font-size: 22px; color: #333; line-height: 1.9; letter-spacing: -.7px; font-weight: 500; width: auto; display: block;}
-    header .mobile.menu .bottom-menu { margin-top: 100px; border: 1px solid #000; padding-left: 16px;  width: 100%; margin-bottom: 200px; }
-    header .mobile.menu .bottom-menu a { font-size: 15px; color: #707070; line-height: 30px; letter-spacing: -.7px; font-weight: 400; }
-    header .mobile.menu .sns {  display: flex; position: absolute; bottom: -120px; z-index: 10; height: 50px; border-top: 1px solid #8d8d8d; width: 100%; padding-top: 5px;  }
-    header .mobile.menu .sns a {  width: 38px; height: 38px; background-size: 100% auto; background-repeat: no-repeat; background-position: 0 0; margin-left: 8px; }
-    header .mobile.menu .sns a:first-child { margin-left: 3px; padding-left: 0; } 
+    header .mobile-menu .gnb-group {  padding-left: 16px; padding-top: 32px; }
+    header .mobile-menu .gnb-group button { font-size: 22px; color: #333; line-height: 1.9; letter-spacing: -.7px; font-weight: 500; width: auto; display: block;}
+    header .mobile-menu .bottom-menu { margin-top: 60px;  padding-left: 16px;  width: 100%; margin-bottom: 50px; }
+    header .mobile-menu .bottom-menu a { font-size: 15px; color: #707070; line-height: 30px; letter-spacing: -.7px; font-weight: 400; }
+    header .mobile-menu .sns {  position: absolute;  left: 0; bottom: 0; display: flex; height: 50px; border-top: 1px solid #8d8d8d; width: 100%; padding-top: 5px;  }
+    header .mobile-menu .sns a {  width: 38px; height: 38px; background-size: 100% auto; background-repeat: no-repeat; background-position: 0 0; margin-left: 8px; }
+    header .mobile-menu .sns a:first-child { margin-left: 3px; padding-left: 0; } 
     
-    /* 모바일 메뉴클릭창 */
-    header.m-menu-active .mobile.nav .m-close-btn { display: block; border: 1px solid #000;}
-    header.m-menu-active .mobile.nav .m-search-btn .m-active  { display: block; border: 1px solid #000;}
-    header.m-menu-active .m-menu-active { display: block; background: #fff; width: 100vw; height: 100%; }
-    header.m-menu-active .mobile.nav .m-menu-btn { display: none; }
-    header.m-menu-active .mobile.nav .m-btn .m-active { display: none; }
-    header.m-menu-active .mobile.nav button:first-child { display: none; }
-    header.m-menu-active .mobile.nav .m-btn .m-active { display: none; }
-    header.m-menu-active .mobile.search { display: none; }
+    
+    
 
     footer { padding-top: 120px; }    
     footer .wrap { background-color: #f6f5f3; padding: 0; }

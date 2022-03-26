@@ -22,7 +22,7 @@
                         <a href="">
                             <img src="./images/icon-younglim-logo-white.png" alt="">
                             <img src="./images/icon-younglim-logo.png" alt="" class="active">
-                            <img src="./images/icon-younglim-logo.png" alt="" class="m-active">
+
                         </a>
                     </h1>
                     <ul class="gnb-group">
@@ -34,21 +34,11 @@
                     </ul>
                 </div>
                 <!-- 모바일 nav -->
-                <nav class="mobile nav">
-                    <button class="m-search-btn">
-                        <img src="./images/icon-gnb-search-white.png" alt="">
-                        <img src="./images/icon-gnb-search.png" alt="" class="m-active">
-                    </button>
-                    <button class="m-btn">
-                        <img src="./images/icon-gnb-menu-white.png" alt="" class="m-menu-btn">
-                        <img src="./images/icon-gnb-menu.png" alt="" class="m-active">
-                        <img src="./images/icon-gnb-menu-close.png" alt="" class="m-close-btn">
-                    </button>
-                </nav>
-                <nav class="pc nav">
+                <nav class="nav">
                     <button class="search-btn">
                         <img src="./images/icon-gnb-search-white.png" alt="">
                         <img src="./images/icon-gnb-search.png" alt="" class="active">
+                        <img src="./images/icon-gnb-search.png" alt="" class="m-active">
                     </button>
                     <button class="like-btn">
                         <img src="./images/icon-gnb-like-white.png" alt="">
@@ -57,6 +47,11 @@
                     <button class="login-btn">
                         <img src="/images/icon-gnb-login-white.png" alt="">
                         <img src="/images/icon-gnb-login.png" alt="" class="active">
+                    </button>
+                    <button class="m-btn">
+                        <img src="./images/icon-gnb-menu-white.png" alt="" class="m-menu-btn">
+                        <img src="./images/icon-gnb-menu.png" alt="" class="m-active">
+                        <img src="./images/icon-gnb-menu-close.png" alt="" class="m-close-btn">
                     </button>
                 </nav>
             </div>
@@ -126,8 +121,8 @@
             </div>
         </div>
 
-        <!-- 모바일 서치클릭 -->
-        <!-- <div class="mobile search">
+        <!--모바일 서치클릭 -->
+        <div class="mobile-search">
             <div class="con-group">
                 <div class="search-bar">
                     <input type="text" placeholder="검색어를 입력해주세요">
@@ -141,9 +136,9 @@
                     <button>데메테르</button>
                 </div>
             </div>
-        </div> -->
+        </div>
         <!-- 모바일 메뉴클릭 -->
-        <div class="mobile menu m-menu-active">
+        <div class="mobile-menu">
             <div class="gnb-group">
                 <button>브랜드</button>
                 <button>제품</button>
@@ -155,7 +150,7 @@
                 <a href="">최근 본 제품</a>
                 <a href="">마이페이지</a>
                 <a href="">e카탈로그</a>
-                <a href="">최근 본 제품</a>
+                <a href="">고객센터</a>
             </div>
             <div class="sns">
                 <a href="">
@@ -442,43 +437,53 @@
                     </div>
                 </div>
 
-
-                <!-- Slider main container -->
                 <div class="swiper swiper-container">
-                    <!-- Additional required wrapper -->
-                    <div class="swiper-wrapper">
-                        <!-- Slides -->
-                        <div class="swiper-slide">Slide 1</div>
-                        <div class="swiper-slide">Slide 2</div>
-                        <div class="swiper-slide">Slide 3</div>
-                    </div>
-                    <!-- If we need pagination -->
-                    <div class="swiper-pagination"></div>
-
-                    <!-- If we need navigation buttons -->
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-                </div>
-
-
-                <div class="img-wrap">
                     <div class="container">
-                        <div class="img-group01">
-                            <a href="" class="Frame-Stone-Gray">
-                                <img src="./images/main-kitchen01.png" alt="">
-                                <p>프레임 Frame Stone Gray</p>
-                            </a>
-                            <a href="" class="Edge45">
-                                <img src="./images/main-kitchen02.png" alt="">
-                                <p>엣지45 Edge45</p>
-                            </a>
+                        <div class="swiper-wrapper">
+                            <!-- <div class="swiper-slide">
+                                <div class="img-wrap">
+                                    <div class="img-group01">
+                                        <a href="" class="Frame-Stone-Gray">
+                                            <img src="./images/main-kitchen01.png" alt="">
+                                            <p>프레임 Frame Stone Gray</p>
+                                        </a>
+                                        <a href="" class="Edge45">
+                                            <img src="./images/main-kitchen02.png" alt="">
+                                            <p>엣지45 Edge45</p>
+                                        </a>
+                                    </div>
+                                    <div class="img-group02">
+                                        <a href="" class="Notte">
+                                            <img src="./images/main-kitchen03.jpg" alt="">
+                                            <p>노테 Notte</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div> -->
+                            <div class="swiper-slide">
+                                <div class="img-wrap">
+                                    <div class="img-group03">
+                                        <a href="">
+                                            <div class="img-box"></div>
+                                            <p>포레스트 그린 Forest Green</p>
+                                        </a>
+                                    </div>
+                                    <div class="img-group04">
+                                        <a href="">
+                                            <div class="img-box"></div>
+                                            <p>모노코드 Mono Code</p>
+                                        </a>
+                                        <a href="">
+                                            <div class="img-box"></div>
+                                            <p>슬로우위켄드 Slow Weekend</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="img-group02">
-                            <a href="" class="Notte">
-                                <img src="./images/main-kitchen03.jpg" alt="">
-                                <p>노테 Notte</p>
-                            </a>
-                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
                     </div>
                 </div>
             </div>
