@@ -61,7 +61,12 @@ header.active nav button .active { display: block; }
 header.active nav button img:first-child { display: none; }
 header.active .top-group .logo a .active { display: block; }
 header.active .top-group .logo a img:first-child { display: none; }
-
+header.active-idx { background: #fff !important; }
+header.active-idx .top-group .gnb-group li a { color: #333; }
+header.active-idx nav button .active { display: block; }
+header.active-idx nav button img:first-child { display: none; }
+header.active-idx .top-group .logo a .active { display: block; }
+header.active-idx .top-group .logo a img:first-child { display: none; }
 
 /* 메뉴 드롭다운 */
 header .drop-down-area {display: none; width: 100%; position: absolute; top: 64px; z-index: 10; background: #fff; }

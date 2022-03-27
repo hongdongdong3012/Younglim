@@ -17,13 +17,14 @@ $(document).ready(function () {
 
     //헤더 서치 클릭시 검색창 생성
     $('header nav .search-btn').click(function () {
-        $('header .search-area').show()
-        $('header .search-area').addClass('active')
-
-        if ($('header .search-area').hasClass('active')) {
-            console.log(1);
-            $('header').addClass('active');
-            return
+        if ($('header').hasClass('active-idx')) {
+            $('header .search-area').hide()
+            $('header .search-area').removeClass('active')
+            $('header').removeClass('active-idx');
+        }else {
+            $('header .search-area').show()
+            $('header .search-area').addClass('active')
+            $('header').addClass('active-idx');
         }
     })
 
